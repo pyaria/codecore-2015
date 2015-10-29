@@ -1,0 +1,131 @@
+/*li {
+	list-style-type: square;
+}
+
+div {
+	padding:10px;
+}
+
+div .line {
+	width:100%;
+	height:1px;
+	background-color:black;
+	padding:2px;
+}
+
+.button {
+	float:right;
+} */
+
+/* To Do App Styles */
+/* Get Google Fonts for Source Code */
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700);
+body {
+	background-color: #f5f1e3; /* Beige */
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 1.4em;
+	font-weight: 400;
+	color: #333;
+}
+a { color: #AC6C27; /* Dark Yellow */ }
+div { box-sizing: border-box; }
+form { margin: 2em 0; }
+/* Headings */
+h1 {
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+input[class="button"] {
+	padding: 0.5em;
+	border: 0;
+}
+.todo-app {
+	margin: 4em auto;
+	max-width: 960px;
+}
+/* Post a Task */
+.post-task {
+	margin-top: 2em;
+	padding: 2em 4em;
+	background-color: darkgoldenrod;
+    color: #f5f1e3; /* Beige */
+}
+.post-task h1 { color: #f5f1e3; /* Beige */ }
+.post-task input { display: block; }
+.post-task input[type="submit"] {
+    margin: 1em auto 0;
+    padding: 1em;
+    background-color: #333;
+    color: #fff;
+    border: 0;
+}
+input[type="text"] {
+    margin-top: 0.25em;
+    height: 2em;
+    width: 100%;
+    padding: 0.25em;
+    color: #333;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+label[for="taskname"]{
+    font-size: 1.25em;
+    font-weight: 300;
+}
+form > label {
+    display: inline-block;
+    padding: 1em; }
+/* Pending List */
+.pending-list { clear: both; }
+.pending-list form {
+    margin: 0.75em 0;
+	border: 3px solid #333; /* Dark Grey */
+}
+.pending-list h1 { color: #333; }
+/* Buttons */
+.pending-list input[class="button"],
+.completed-list input[class="button"] {
+    z-index: -999;
+	float: right;
+	margin-left: 2em;
+    padding: 1.57em;
+	color: #fff;
+	font-size: 0.75em;
+	letter-spacing: 1px;
+}
+.pending-list input[class="button"] {
+    width: 15%;
+    background-color: #333;
+    color: #f5f1e3; /* Beige */
+}
+.pending-list input[class="button"]:hover {
+	background-color: darkcyan;
+    width: 25%; /* Is there a more seamless way to accomplish this in CSS3? */
+	transition: ease-in 0.2s;
+}
+/* Completed Tasks */
+.completed-list { color: #a7a499; /* Brown */ }
+.completed-list form {
+	margin: 0.75em 0;
+	border: 3px solid #a7a499; /* Brown */
+}
+.completed-list h1 {
+    color:  #a7a499; /* Brown */ }
+
+.completed-list input[class="button"] {
+    width: 15%;
+    background-color: #a7a499; /* Brown */
+    color: #f5f1e3; /* Beige */
+    border-left: #f5f1e3; /* Beige */
+}
+.completed-list input[class="button"]:hover {
+	background-color: brown;
+    width: 25%;
+	transition: ease-in 0.2s;
+}
+.completed-list input[class="button"]:hover:after {
+    display: inline;
+    content: '!';
+}

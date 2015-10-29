@@ -1,0 +1,33 @@
+<body>
+<div class="todo-app"> <a href="/tasks">To Do Application</a>
+  <div class="post-task">
+    <h1>To Do List</h1>
+
+		<form method="post" action="/tasks">
+			<label for="taskname">What do you want to accomplish today?</label>
+		    <input type="text" id="taskname" name="taskname" value="">
+			  <input type="submit" value="Add to List">
+		</form>
+	</div>
+
+		<div class="pending-list">
+		  <h1>Get Crackin'</h1>
+		    <% @tasklist.each do |task| %>
+		 		<form method="post" action="/update">
+		      <label for="pending-task"><%= task.taskname %></label><input type="submit" value="All Finished" class="button">
+					<input type="hidden" name="_method" value="<%= task.id%>">
+        </form>
+			  <% end %>
+		</div>
+
+		<div class="completed-list">
+			<h1>All Finished</h1>
+				<% @completetasks.each do |task| %>
+				<form method="post" action="/change">
+					<label for="finished-task"><%= task.taskname %></label><input type="submit" value="Not Done" class="button">
+					<input type="hidden" name="_method" value="<%= task.id%>">
+				</form>
+				<% end %>
+		</div>
+</div>
+</body>
