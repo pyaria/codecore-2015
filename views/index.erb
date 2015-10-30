@@ -1,0 +1,31 @@
+<h1>Team Randomizer!</h1>
+<hr>
+<form method="post" action="/">
+  <div class="namesbox"
+    <label for="names">Give me some names, separated by commas</label>
+  </div>
+  <div>
+    <textarea id="names" name="names"></textarea>
+  </div>
+  <div class="teamsbox">
+    <label for="number">Number of teams?</label>
+  </div>
+  <div>
+    <input type="text" id="number" name="number" class="textbox">
+  </div>
+  <input type="submit" value="submit">
+</form>
+<div>
+  <%= @errormessage %>
+</div>
+<div>
+  <% for i in 1..@team_names.length do %>
+    <table>
+      <tr>
+      <% for i in 1..@team_numbers do %>
+        <td><%= @team_names.pop %></td>
+      <% end %>
+      </tr>
+    </table>
+  <% end %>
+</div>

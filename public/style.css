@@ -1,0 +1,16 @@
+textarea {
+  width: 70%;
+  margin: 5px;
+}
+
+input.textbox {
+  width: 70%;
+}
+
+input {
+  margin: 5px;
+}
+
+td {
+  width: 200px;
+}
