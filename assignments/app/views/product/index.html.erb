@@ -1,0 +1,17 @@
+<h1><%= (@num_products) %> Products in List</h1>
+<hr>
+<% @products.each do |product| %>
+<div>
+  <%= "Product: " + product.name %>
+</div>
+<div>
+  <%= "Price: " + product.price %>
+</div>
+<div>
+  <%= "Product code: " + product.code %>
+</div>
+<div>
+  <%= "Product description: " + product.description %>
+</div>
+  <hr>
+<% end %>

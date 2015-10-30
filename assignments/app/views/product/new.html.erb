@@ -1,0 +1,22 @@
+<h1>Catalogue a new product</h1>
+<div style="width: 50%">
+<%= form_for @product do |t|%>
+<div>
+  <%= t.label :name %>
+  <%= t.text_field :name %>
+</div>
+<div>
+  <%= t.label :price %>
+  <%= t.text_field :price %>
+</div>
+<div>
+  <%= t.label :code %>
+  <%= t.text_field :code %>
+</div>
+<div>
+  <%= t.label :description %>
+  <%= t.text_field :description %>
+</div>
+<%= t.submit %>
+<% end  %>
+</div>
