@@ -1,0 +1,59 @@
+<body>
+		<a href="/tasks">To Do Application</a>
+
+<div class="todo-app"> <a href="/tasks">To Do Application</a>
+  <div class="post-task">
+
+
+		<h1>To Do List</h1>
+
+		<form method="post" action="/tasks">
+			<div>
+		    <label for="taskname">What do you want to accomplish today?</label>
+		    <input type="text" id="taskname" name="taskname" value="">
+			  <input type="submit" value="Add to List">
+			</div>
+		</form>
+	</div>
+
+		<div class="pending-list">
+		  <h1>Get Crackin'</h1>
+		 		<form method="post" action="/tasks/update">
+		      <div> World domination<input type="submit" value="All Finished" class="button">
+						<input type="hidden" name="_method" value="1">
+					</div>
+		    </form>
+		 		<form method="post" action="/tasks/update">
+		      <div> Abolish cancer<input type="submit" value="All Finished" class="button">
+						<input type="hidden" name="_method" value="2">
+					</div>
+		    </form>
+		 		<form method="post" action="/tasks/update">
+		      <div> Solve world hunger<input type="submit" value="All Finished" class="button">
+						<input type="hidden" name="_method" value="3">
+					</div>
+		    </form>
+		 		<form method="post" action="/tasks/update">
+		      <div> Stop human trafficking<input type="submit" value="All Finished" class="button">
+						<input type="hidden" name="_method" value="4">
+					</div>
+		    </form>
+
+		</div>
+
+		<div class="completed-list">
+			<h1>All Finished</h1>
+			<ul>
+				<form method="post" action="/tasks/change">
+					<div> Wake up<input type="submit" value="Not Done" class="button">
+						<input type="hidden" name="_method" value="5">
+					</div>
+				</form>
+			</ul>
+		</div>
+</div>
+
+
+
+
+</body>
